@@ -1,0 +1,81 @@
+APIS : 
+1. Search  via parameters existing DB -> /search : POST {mobile/voter/name} - DONE
+2. Login api -> POST - DONE
+3. Add Profile -> /addVisitor : POST {user profile fields} - DONE
+4. Edit profile -> /editProfile : POST {user profile fields} - DONE
+5. Add User -> Repsentative/Admin login - DONE
+6. Generate Token -> /generateToken : POST {userId} - DONE
+7. Fetch User Tickets -> /fetchUserTickets : GET {userId} - DONE
+8. Generate followup token -> /addActivity : GET {TicketId} - DONE
+9. Add Resolution Desk activities against token -> resolutionActivities/addActivity - DONE
+10. Fetch resolution desk activities -> /fetchActivities - DONE 
+11.Upload documents -> /uploadDocument : POST - DONE
+12.Delete douemnt - DONE
+13. FETCH all DOCUMENT for user - DONE
+14. Download document - DONE
+15. Fetch MLAs
+16. MLA tickets 
+
+
+Schema: 
+1. Users
+id,name,mobile1,mobile2,aadhar,voterId,gender,address,
+2. Tickets
+id,tokenId,userId,constituency,ward,booth,locality,sub-locality,purpose,issueTitle,issueDescription,status
+3. Documents
+id,documentId,ticketId
+4. ResolutionActivities
+id,TokenId,description,data
+5. MLA Tickets
+id,TokenId,status,MLAlevel
+6. MLA
+id,name,level,category
+7. VoterList
+id,name,mobile,aadhar,viterId
+8. ResolutionDeskTickets
+id,TokenId,userId,deskNo
+
+01/06/2021:
+- Finish Db scehma making
+- Create Login API & Access token api 
+- Finish search api from mobile & name 
+
+
+
+
+
+firstName
+lastName
+assemblyConstituencyNumber
+boothNumber
+sectionNumber
+serialNumber
+address
+relationType
+relativeFirstName
+relativeLastName
+voterId
+gender
+age
+mobileNumber
+sectionName
+boothName
+pollingCentre
+pollingStationBuildingName
+assemblyConstituencyName
+districtName
+pinCode
+name
+dateOfBirth
+localityName
+localityDetails
+
+
+Questions :
+- Roles for login is Admin/MLA and MLA level have any speicifc access ? 
+- 
+
+
+ssh -i "../testit.pem" ec2-user@ec2-34-228-17-50.compute-1.amazonaws.com
+scp -i  ../testit.pem   GetAutomationDone-0.0.3.jar  ec2-user@ec2-34-228-17-50.compute-1.amazonaws.com:.
+

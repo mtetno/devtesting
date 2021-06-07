@@ -1,0 +1,641 @@
+{
+	"info": {
+		"_postman_id": "dcfa9680-ff5a-4bc4-8f82-6eeae9a56178",
+		"name": "GrievanceManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://34.228.17.50:8082/GrievanceManagement/UI/login?username=admin&password=password",
+					"protocol": "http",
+					"host": [
+						"34",
+						"228",
+						"17",
+						"50"
+					],
+					"port": "8082",
+					"path": [
+						"GrievanceManagement",
+						"UI",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "admin"
+						},
+						{
+							"key": "password",
+							"value": "password"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "9f34fafe-8e2b-433c-8008-d5336b652ada",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test\",\r\n    \"username\": \"test\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/TestApps/user/addUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"TestApps",
+						"user",
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchViaVoterId",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4b676ea3-0f6c-443b-b3f1-766dda5a5ea0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test\",\r\n    \"username\": \"test\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/TestApps/search/voterId/XGV1124916",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"TestApps",
+						"search",
+						"voterId",
+						"XGV1124916"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchViaMobile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "79d55ae6-ad7b-4bb5-8923-f363720ef9bc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test\",\r\n    \"username\": \"test\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/TestApps/search/mobile/9811041410",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"TestApps",
+						"search",
+						"mobile",
+						"9811041410"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchViaName",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "6a1f5be0-6302-4ecf-b7cf-382b4031df8c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"test\",\r\n    \"username\": \"test\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/TestApps/search/name/NEE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"TestApps",
+						"search",
+						"name",
+						"NEE"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddVisitor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "225dd751-7bfd-48ef-9752-4bcbacdaef13",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"name\" : \"q\",\r\n     \"gender\" : \"q\",\r\n     \"mobile\" : \"q\",\r\n     \"address\" : \"w\",\r\n     \"aadhar\" : \"s\",\r\n     \"voterId\" : \"s\",\r\n     \"purpose\" : \"s\",\r\n     \"title\" : \"s\",\r\n     \"description\" : \"s\",\r\n     \"assemblyConstituency\" : \"s\",\r\n     \"ward\" : \"s\",\r\n     \"booth\" : \"s\",\r\n     \"locality\" : \"s\",\r\n     \"sublocality\" : \"s\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/TestApps/visitor/addVisitor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"TestApps",
+						"visitor",
+						"addVisitor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditVisitor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "5e232297-80ef-4eff-a22a-8692b0ca1383",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"id\": 13,\r\n     \"name\" : \"q12222\",\r\n     \"gender\" : \"q\",\r\n     \"mobile\" : \"q\",\r\n     \"address\" : \"w\",\r\n     \"aadhar\" : \"s\",\r\n     \"voterId\" : \"s\",\r\n     \"purpose\" : \"s\",\r\n     \"title\" : \"s\",\r\n     \"description\" : \"s\",\r\n     \"assemblyConstituency\" : \"s\",\r\n     \"ward\" : \"s\",\r\n     \"booth\" : \"s\",\r\n     \"locality\" : \"s\",\r\n     \"sublocality\" : \"s\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/TestApps/visitor/editVisitor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"TestApps",
+						"visitor",
+						"editVisitor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GenerateToken",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4eefa920-394b-4df8-82cd-fe9780da80d8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"userId\": \"13\",\r\n     \"constituency\" : \"q12222\",\r\n     \"ward\" : \"q\",\r\n     \"booth\" : \"q\",\r\n     \"locality\" : \"w\",\r\n     \"sublocality\" : \"s\",\r\n     \"purpose\" : \"s\",\r\n     \"issueTitle\" : \"s\",\r\n     \"issueDescription\" : \"s\",\r\n     \"status\" : \"s\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/TestApps/ticket/generateToken",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"TestApps",
+						"ticket",
+						"generateToken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindAllUserTickets",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "33ea721f-0f99-4daa-9fce-30f7c527665d",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"userId\": \"13\",\r\n     \"constituency\" : \"q12222\",\r\n     \"ward\" : \"q\",\r\n     \"booth\" : \"q\",\r\n     \"locality\" : \"w\",\r\n     \"sublocality\" : \"s\",\r\n     \"purpose\" : \"s\",\r\n     \"issueTitle\" : \"s\",\r\n     \"issueDescription\" : \"s\",\r\n     \"status\" : \"s\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/TestApps/ticket/findAllUserTickets/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"TestApps",
+						"ticket",
+						"findAllUserTickets",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ResolutionDeskAddActivity",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "78075717-6318-4cc9-bf44-2febd2651567",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"tokenId\": \"13\",\r\n     \"description\" : \"q12222\",\r\n     \"isFollowUp\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/TestApps/resolutionActivities/addActivity",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"TestApps",
+						"resolutionActivities",
+						"addActivity"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchActivities",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "7c872f03-3081-4418-ae15-c6bae59bf03b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"tokenId\": \"13\",\r\n     \"description\" : \"q12222\",\r\n     \"isFollowUp\" : 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/TestApps/resolutionActivities/fetchActivities/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"TestApps",
+						"resolutionActivities",
+						"fetchActivities",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UploadDocument",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "f642e8e2-1883-4f9f-8c79-2a4283f2e861",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Public/Pictures/Sample Pictures/Chrysanthemum - Copy.jpg"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/TestApps/documents/upload/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"TestApps",
+						"documents",
+						"upload",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FetchDocuments",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "f642e8e2-1883-4f9f-8c79-2a4283f2e861",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Public/Pictures/Sample Pictures/Chrysanthemum - Copy.jpg"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/TestApps/documents/files",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"TestApps",
+						"documents",
+						"files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetSpecificDocument",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "f642e8e2-1883-4f9f-8c79-2a4283f2e861",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Public/Pictures/Sample Pictures/Chrysanthemum - Copy.jpg"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/TestApps/documents/files/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"TestApps",
+						"documents",
+						"files",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteDocument",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "f642e8e2-1883-4f9f-8c79-2a4283f2e861",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Public/Pictures/Sample Pictures/Chrysanthemum - Copy.jpg"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/TestApps/documents/files/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"TestApps",
+						"documents",
+						"files",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
